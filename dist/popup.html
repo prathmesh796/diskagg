@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaggle → Discord</title>
+    <style>
+      body { font-family: Arial; width: 250px; padding: 10px; }
+      input { width: 100%; margin-bottom: 8px; padding: 6px; }
+      button { width: 100%; padding: 8px; background: #4e73df; color: white; border: none; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h3>Setup</h3>
+    <label>Kaggle Username</label>
+    <input type="text" id="kaggleUser" placeholder="e.g. prathmesh_s"/>
+    <label>Discord Webhook URL</label>
+    <input type="text" id="webhook" placeholder="https://discord.com/api/webhooks/..."/>
+    <button id="save">Save</button>
+    <p id="status"></p>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
