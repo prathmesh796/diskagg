@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w",
-    "build": "del-cli dist && tsc && copyfiles -u 1 \"manifest.json\" \"popup.html\" \"icons/**/*\" dist"
+    "build": "del-cli dist && tsc && copyfiles \"manifest.json\" \"src/popup.html\" \"icons/**/*\" dist"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.210",

@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import rpc from "discord-rich-presence";
 import * as dotenv from 'dotenv'
 import { Request, Response } from "express";
+import cors from "cors";
 
 dotenv.config()
 
@@ -14,6 +15,7 @@ if (!DISCORD_CLIENT_ID) {
 }
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 const client = rpc(DISCORD_CLIENT_ID);

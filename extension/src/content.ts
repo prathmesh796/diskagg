@@ -1,4 +1,11 @@
-import type { ActivityPayload } from "./types";
+type ActivityType = "notebook" | "dataset" | "competition" | "profile" | "other";
+
+interface ActivityPayload {
+  type: ActivityType;
+  title: string;
+  url: string;
+  startedAt?: number;
+}
 
 const LOCAL_BRIDGE = "http://localhost:3000/activity";
 const POLL_INTERVAL_MS = 5000; // 5s
